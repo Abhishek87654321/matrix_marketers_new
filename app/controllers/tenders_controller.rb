@@ -3,7 +3,7 @@ class TendersController < ApplicationController
 
   # GET /tenders or /tenders.json
   def index
-    @tenders = Tender.all
+    @tenders = current_user.tenders
   end
 
   # GET /tenders/1 or /tenders/1.json
