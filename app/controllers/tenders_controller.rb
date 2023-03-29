@@ -63,7 +63,7 @@ class TendersController < ApplicationController
       @tender = Tender.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
+    # Only allow a list of trusted parameters through. as strong parameter
     def tender_params
       params.require(:tender).permit(:title, :description, :status, :submission_date)
     end

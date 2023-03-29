@@ -1,0 +1,35 @@
+    <div class= 'center'>
+        <h2 class = 'tenders-heading'>Tenders</h2>
+        <table class = 'my-table' id= 'my_table'>
+        <thead>
+            <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @tenders&.each do|tender|%>
+                <tr>
+                <td><%= tender&.title%></td> 
+                <td><%= tender&.description%></td>
+                <td><%= tender&.status%></td>
+                </tr>
+            <%end%>
+        </tbody>
+        </table>
+    <div>
+    <style>
+    .tenders-heading{
+        margin-inline-start: 13em;
+        padding: 1px 140px;
+    }
+    .center{
+      background: #f9f9f9;
+    }
+    </style>
+    <script>
+        $(document).ready(function(){
+        let table = new DataTable('#my_table');
+    });
+    </script>

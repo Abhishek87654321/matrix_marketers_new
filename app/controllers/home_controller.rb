@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @users = User.all
+    # use safe navigatigation operator here
+    @tenders = current_user&.tenders 
   end
 end
