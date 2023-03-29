@@ -1,0 +1,30 @@
+<table id = 'users_table'>
+  <thead>
+  <tr>
+    <th>Email</td>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Tenders</th>
+  </tr>
+  <thead>
+  <tbody>
+  <% @users.each do|user|%>
+  <tr>
+    <td><%= user&.email%></td>
+    <td><%=user&.first_name%></td>
+    <td><%=user&.last_name %></td>
+    <td><%= user.tenders.ids%></td>
+  </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Go To Home' , root_path %>
+
+<script>
+$(document).ready(function(){
+    let table = new DataTable('#users_table');
+});
+</script>
+
+
