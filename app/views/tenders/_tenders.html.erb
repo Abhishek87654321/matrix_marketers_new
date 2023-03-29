@@ -3,9 +3,10 @@
         <table class = 'my-table' id= 'my_table'>
         <thead>
             <tr>
-            <th class= 'no-alignment'>Title</th>
-            <th class= 'no-alignment'>Description</th>
-            <th class= 'no-alignment' >Status</th>
+            <th >Title</th>
+            <th >Description</th>
+            <th  >Status</th>
+            <th  >Date</th>
             </tr>
         </thead>
         <tbody>
@@ -14,6 +15,7 @@
                 <td><%= tender&.title%></td> 
                 <td><%= tender&.description%></td>
                 <td><%= tender&.status%></td>
+                <td><%= tender&.submission_date%></td>
                 </tr>
             <%end%>
         </tbody>
@@ -26,9 +28,6 @@
     }
     .center{
       background: #f9f9f9;
-    }
-    .no-alignment{
-        text-align: revert !important;
     }
     </style>
     <script>
